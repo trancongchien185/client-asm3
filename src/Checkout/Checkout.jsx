@@ -6,7 +6,9 @@ import "./Checkout.css";
 import { toast } from "react-toastify";
 import Loading from "../Loading/Loading";
 import io from "socket.io-client";
-const socket = io("http://localhost:5000", { transports: ["websocket"] });
+const socket = io("https://asm-03-njs.onrender.com", {
+  transports: ["websocket"],
+});
 
 function Checkout(props) {
   const user = JSON.parse(localStorage.getItem("user"));
